@@ -2,14 +2,14 @@ angular.module('listings').config(['$stateProvider', '$urlRouterProvider',
   function($stateProvider) {
     //Listings state providing
     $stateProvider
-      .state('listings.map', {
-        url: '/map',
-        templateUrl: 'app/views/map-listings.client.view.html'
-      })
       .state('listings', {
         url: '/listings',
         abstract: true,
         template: '<ui-view/>'
+      })
+      .state('listings.map', {
+        url: '/map',
+        templateUrl: 'app/views/map-listings.client.view.html'
       })
       .state('listings.list', {
         url: '',
